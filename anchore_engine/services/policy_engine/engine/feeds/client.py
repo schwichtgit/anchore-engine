@@ -605,7 +605,7 @@ class GrypeDBServiceClient(IFeedSource):
         """
         try:
             listing_json, record = self._get_feed_group_data()
-            if record.content_type != "application/x-tar":
+            if record.content_type != "application/x-tar" and record.content_type != "binary/octet-stream":
                 raise UnexpectedMIMEType(record.content_type)
             return GroupData(
                 data=record.content,

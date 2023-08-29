@@ -1,6 +1,6 @@
 ARG BASE_REGISTRY=registry.access.redhat.com
 ARG BASE_IMAGE=ubi8/ubi
-ARG BASE_TAG=8.5
+ARG BASE_TAG=8.8
 
 #### Start first stage
 #### Anchore wheels, binary dependencies, etc. are staged to /build_output for second stage
@@ -12,8 +12,8 @@ ENV LANG=en_US.UTF-8
 ENV LC_ALL=C.UTF-8
 
 # environment variables for dependent binary versions
-ENV SYFT_VERSION=v0.33.0
-ENV GRYPE_VERSION=v0.27.3
+ENV SYFT_VERSION=v0.88.0
+ENV GRYPE_VERSION=v0.65.2
 ENV PIP_VERSION=21.0.1
 
 # setup build artifact directory
